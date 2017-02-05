@@ -107,7 +107,7 @@
             android:layout_marginTop="10dp"
             android:textSize="@dimen/text_18"
             android:textColor="@android:color/holo_red_light"
-            android:text="[*. user name:test  and Password: 123]" />
+            android:text="[* User name:test  and Password: 123]" />
 
 
         <ProgressBar

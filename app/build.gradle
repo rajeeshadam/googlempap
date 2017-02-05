@@ -18,7 +18,24 @@ android {
             shrinkResources(true)
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+        }
+    }
 
+    productFlavors {
+        stage {
+            applicationId "com.task.googlemap"
+            minSdkVersion 15
+            targetSdkVersion 25
+        }
+        production {
+            applicationId "com.task.googlemap"
+            minSdkVersion 15
+            targetSdkVersion 25
+        }
     }
 
 

@@ -112,8 +112,10 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
 
 	}
 
+
 	@Override
 	protected void onDestroy() {
+		ButterKnife.unbind(this);
 		super.onDestroy();
 	}
 

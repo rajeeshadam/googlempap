@@ -61,7 +61,7 @@ public class Utils {
     public void logout(final Context context) {
         android.support.v7.app.AlertDialog dialog = new android.support.v7.app.AlertDialog.Builder(context)
                 .setMessage("Do you want to logout?")
-                .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         SharedPreferences sharedPref = context.getSharedPreferences("LOGIN_STATUS", Context.MODE_PRIVATE);
@@ -70,6 +70,7 @@ public class Utils {
                         editor.commit();
                         Intent intent = new Intent(context, LoginActivity.class);
                         context.startActivity(intent);
+                        ((Activity)context).finish();
                         dialog.dismiss();
                     }
                 })
