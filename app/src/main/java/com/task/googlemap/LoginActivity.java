@@ -11,7 +11,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import com.task.googlemap.presenter.ILoginPresenter;
-import com.task.googlemap.presenter.LoginPresenterCompl;
+import com.task.googlemap.presenter.LoginPresenter;
 import com.task.googlemap.view.ILoginView;
 
 import butterknife.Bind;
@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView, View
 		btnClear.setOnClickListener(this);
 
 		//init
-		loginPresenter = new LoginPresenterCompl(this);
+		loginPresenter = new LoginPresenter(this);
 		loginPresenter.setProgressBarVisiblity(View.INVISIBLE);
 	}
 

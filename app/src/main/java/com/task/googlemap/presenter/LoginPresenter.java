@@ -11,12 +11,12 @@ import com.task.googlemap.view.ILoginView;
 /**
  * Created by Rajeesh adambil on 05/02/17
  */
-public class LoginPresenterCompl implements ILoginPresenter {
+public class LoginPresenter implements ILoginPresenter {
 	ILoginView iLoginView;
 	IUser user;
 	Handler    handler;
 
-	public LoginPresenterCompl(ILoginView iLoginView) {
+	public LoginPresenter(ILoginView iLoginView) {
 		this.iLoginView = iLoginView;
 		initUser();
 		handler = new Handler(Looper.getMainLooper());
@@ -51,6 +51,6 @@ public class LoginPresenterCompl implements ILoginPresenter {
 
 
 	private void initUser(){
-		user = new UserModel("mvp","mvp");
+		user = new UserModel("test","123");
 	}
 }
